@@ -1,27 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.text-main {
+  @apply text-neutral-800
+    text-[10px]
+    font-normal
+    leading-relaxed md:text-2xl;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.text-semibold {
+  @apply text-base
+    font-semibold md:text-4xl;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.text-title {
+  @apply text-neutral-800 text-[24px] font-semibold md:text-[46px];
+}
+
+.button {
+  @apply bg-stone-500 py-4 text-neutral-200 text-[10px] md:text-xl font-bold hover:bg-neutral-200 md:py-[30px] transition-all;
 }
