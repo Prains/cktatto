@@ -36,7 +36,7 @@ const DesktopHeader = () => {
                   href={href}
                   className={`text-xs ${
                     isActive ? "text-neutral-900" : "text-stone-500"
-                  } font-semibold transition-all hover:opacity-50`}
+                  } font-semibold transition-all hover:opacity-50 uppercase`}
                 >
                   {text}
                 </Link>
@@ -52,7 +52,7 @@ const DesktopHeader = () => {
                   href={href}
                   className={`text-xs ${
                     isActive ? "text-neutral-900" : "text-stone-500"
-                  } font-semibold transition-all hover:opacity-50`}
+                  } font-semibold transition-all hover:opacity-50 uppercase`}
                 >
                   {text}
                 </Link>

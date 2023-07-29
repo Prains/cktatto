@@ -6,7 +6,7 @@ import Logo from "@/components/ui/Logo";
 import { motion } from "framer-motion";
 import BurgerLink from "../BurgerLink/BurgerLink";
 import routes from "@/utils/routes";
-import Link from "next/link";
+import { backgroundLion } from "@/images/burger";
 
 interface IBurger {
   setOpen: Function;
@@ -40,7 +40,14 @@ const Burger = ({ setOpen, open }: IBurger) => {
         exit={{ y: -2000 }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
-        <ContentZone className="flex flex-col">
+        <ContentZone
+          className="flex flex-col"
+          style={{
+            backgroundImage: `url(${backgroundLion.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
           <div className="flex items-center justify-between">
             <Logo />
             <NavigationIcons setOpen={setOpen} open={open} />
