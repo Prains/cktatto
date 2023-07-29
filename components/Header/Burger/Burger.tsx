@@ -6,6 +6,7 @@ import Logo from "@/components/ui/Logo";
 import { motion } from "framer-motion";
 import BurgerLink from "../BurgerLink/BurgerLink";
 import routes from "@/utils/routes";
+import Link from "next/link";
 
 interface IBurger {
   setOpen: Function;
@@ -24,6 +25,12 @@ const Burger = ({ setOpen, open }: IBurger) => {
     { text: "Контакты", href: routes.contacts },
   ];
 
+  const phone = "+7 916 053 23 23";
+
+  const workingTime = "с 10:00 до 22:00";
+
+  const city = "г. Балашиха";
+
   return (
     <Overlay>
       <motion.div
@@ -33,12 +40,12 @@ const Burger = ({ setOpen, open }: IBurger) => {
         exit={{ y: -2000 }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
-        <ContentZone>
+        <ContentZone className="flex flex-col">
           <div className="flex items-center justify-between">
             <Logo />
             <NavigationIcons setOpen={setOpen} open={open} />
           </div>
-          <nav className="mt-10">
+          <nav className="mt-8">
             <ul className="flex items-center justify-center flex-col gap-6">
               {navList.map((item) => (
                 <li key={item.text}>
@@ -51,6 +58,10 @@ const Burger = ({ setOpen, open }: IBurger) => {
               ))}
             </ul>
           </nav>
+          <p className="flex items-center justify-center flex-col mt-5">
+            {workingTime}
+            <span>{city}</span>
+          </p>
         </ContentZone>
       </motion.div>
     </Overlay>

@@ -33,9 +33,8 @@ const BurgerLink = ({ href, text, onClick }: Link) => {
       )}
       <Link
         href={href}
-        className={
-          isActive ? "font-semibold text-neutral-900" : "text-stone-500 font-semibold"
-        }
+        className={`font-semibold uppercase
+          ${isActive ? "text-neutral-900" : "text-stone-500"}`}
         onClick={onClick}
       >
         {text}
