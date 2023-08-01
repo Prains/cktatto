@@ -8,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className="transition-all font-text">
+      <body className="transition-all font-text bg-neutral-200">
         <Header />
         {children}
       </body>

@@ -1,6 +1,6 @@
 "use client";
 
-import MobileHeader from "../MobileHeader/MobileHeader";
+import MobileHeader from "./MobileHeader/MobileHeader";
 import DesktopHeader from "./DesktopHeader/DesktopHeader";
 
 const Header = () => {

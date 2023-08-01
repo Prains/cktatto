@@ -60,6 +60,7 @@ const Burger = ({ setOpen, open }: IBurger) => {
                     href={item.href}
                     text={item.text}
                     onClick={handleClose}
+                    key={item.href}
                   />
                 </li>
               ))}

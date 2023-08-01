@@ -1,8 +1,8 @@
 "use client";
-import ContentZone from "../ui/ContentZone/ContentZone";
-import Logo from "../ui/Logo";
-import NavigationIcons from "../Header/NavigationIcons/NavigationIcons";
-import Burger from "../Header/Burger/Burger";
+import ContentZone from "../../ui/ContentZone/ContentZone";
+import Logo from "../../ui/Logo";
+import NavigationIcons from "../NavigationIcons/NavigationIcons";
+import Burger from "../Burger/Burger";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 

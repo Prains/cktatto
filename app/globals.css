@@ -21,5 +21,5 @@
 }
 
 .button {
-  @apply bg-stone-500 py-4 text-neutral-200 text-[10px] md:text-xl font-bold hover:bg-neutral-200 md:py-[30px] transition-all;
+  @apply rounded-[5px] bg-stone-500 py-4 text-neutral-200 text-[10px] md:text-xl font-bold hover:bg-neutral-200 md:py-[30px] transition-all;
 }

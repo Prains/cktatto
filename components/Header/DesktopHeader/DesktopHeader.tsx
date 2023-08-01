@@ -34,6 +34,7 @@ const DesktopHeader = () => {
               return (
                 <Link
                   href={href}
+                  key={href}
                   className={`text-xs ${
                     isActive ? "text-neutral-900" : "text-stone-500"
                   } font-semibold transition-all hover:opacity-50 uppercase`}
@@ -50,6 +51,7 @@ const DesktopHeader = () => {
               return (
                 <Link
                   href={href}
+                  key={href}
                   className={`text-xs ${
                     isActive ? "text-neutral-900" : "text-stone-500"
                   } font-semibold transition-all hover:opacity-50 uppercase`}

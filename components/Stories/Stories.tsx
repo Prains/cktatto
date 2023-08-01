@@ -15,9 +15,14 @@ const Stories = ({ stories }: Stories) => {
     setOpen(true);
   };
   return (
-    <section>
+    <section className="flex items-center justify-center gap-6 my-7">
       {stories.map((story, index) => (
-        <Story story={story} setOpen={handleOpen} index={index} />
+        <Story
+          story={story}
+          setOpen={handleOpen}
+          index={index}
+          key={story.image}
+        />
       ))}
       {open && (
         <ActiveStory
