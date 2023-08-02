@@ -18,9 +18,9 @@ const Mainpage = () => {
   ];
 
   const portfolioImages = [
-    portfolioMock.src,
-    portfolioMock.src,
-    portfolioMock.src,
+    portfolioMock,
+    portfolioMock,
+    portfolioMock,
   ];
 
   return (

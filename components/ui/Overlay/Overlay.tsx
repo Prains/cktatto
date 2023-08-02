@@ -16,7 +16,7 @@ const Overlay = ({ className, children }: Overlay) => {
   return (
     <div
       className={
-        "absolute top-0 left-0 right-0 flex items-center justify-center w-full h-full bg-neutral-900/50" +
+        "z-50 absolute top-0 left-0 right-0 flex items-center justify-center w-full h-full bg-neutral-900/50" +
         ` ${className}`
       }
     >
