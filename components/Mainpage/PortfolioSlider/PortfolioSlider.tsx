@@ -4,6 +4,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css/bundle";
 import Image from "next/image";
 import Link from "next/link";
+import { leftLine } from "@/images/burger";
 
 interface PSlider {
   portfolioImages: { src: string }[];
@@ -12,7 +13,13 @@ interface PSlider {
 const PortfolioSlider = ({ portfolioImages }: PSlider) => {
   return (
     <section className="flex flex-col gap-9">
-      <h2 className="uppercase text-semibold text-stone-500 self-center">
+      <h2 className="flex items-center uppercase text-semibold text-stone-500 self-center">
+        <Image
+          src={leftLine}
+          alt="черная полоска"
+          className="absolute left-0"
+          priority
+        />
         портфолио
       </h2>
       <div className="z-0">
