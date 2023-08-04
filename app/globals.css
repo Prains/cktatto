@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 .text-main {
-  @apply text-neutral-800
-    text-[10px]
+  @apply text-[10px]
     font-normal
-    leading-relaxed md:text-2xl;
+    leading-relaxed
+    text-neutral-800 md:text-2xl;
 }
 
 .text-semibold {
@@ -17,9 +17,9 @@
 }
 
 .text-title {
-  @apply text-neutral-800 text-[24px] font-semibold md:text-[46px];
+  @apply text-[24px] font-semibold text-neutral-800 md:text-[46px];
 }
 
 .button {
-  @apply rounded-[5px] bg-stone-500 py-4 text-neutral-200 text-[10px] md:text-xl font-bold hover:bg-neutral-200 md:py-[30px] transition-all;
+  @apply rounded-[5px] bg-stone-500 py-4 text-[10px] font-bold text-neutral-200 transition-all hover:bg-neutral-200 md:py-[30px] md:text-xl;
 }
