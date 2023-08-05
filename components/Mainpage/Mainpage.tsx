@@ -2,6 +2,7 @@ import Stories from "../Stories/Stories";
 import mock from "./8Z_Xg94fa-OZfQcEwYASHPNqy7EiVV5ewviDYdyO1hIXazkzvcQvjGSkE9eYVW5hJV9xFo3EoIjE-qwiPikpBX5I 1.png";
 import AboutStudioBlock from "./AboutStudioBlock/AboutStudioBlock";
 import AdvantagesBlock from "./AdvantagesBlock/AdvantagesBlock";
+import EducatuonBlock from "./EducatuonBlock/EducatuonBlock";
 import MastersBlock from "./MastersBlock/MastersBlock";
 import MobileMainBlock from "./MobileMainBlock/MobileMainBlock";
 import PortfolioSlider from "./PortfolioSlider/PortfolioSlider";
@@ -32,6 +33,7 @@ const Mainpage = () => {
       <MastersBlock />
       <AboutStudioBlock />
       <AdvantagesBlock />
+      <EducatuonBlock />
     </main>
   );
 };
