@@ -1,5 +1,11 @@
+import { Montserrat } from "next/font/google";
 import Header from "@/components/Header/Header";
 import "./globals.css";
+
+const mont = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -7,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru">
-      <body className="transition-all font-text bg-neutral-200">
+    <html lang="ru" className={mont.className}>
+      <body className="bg-neutral-200 transition-all">
         <Header />
         {children}
       </body>

@@ -2,6 +2,7 @@ import { leftLine } from "@/images/burger";
 import Image from "next/image";
 import aboutStudioImage from "./123.png";
 import ContentZone from "@/components/ui/ContentZone/ContentZone";
+import Link from "next/link";
 
 const AboutStudioBlock = () => {
   return (
@@ -30,13 +31,16 @@ const AboutStudioBlock = () => {
           этаже с видом на закат, существует студия “Стальной клык”
         </p>
         <div className="flex items-center justify-center gap-8">
-          <button className="button !py-3 px-9 uppercase">
+          <Link className="button !py-3 px-9 text-center uppercase" href={"/"}>
             больше <br />о студии
-          </button>
-          <button className="text-main border border-[#1A0F0C] px-6 py-2 uppercase">
+          </Link>
+          <Link
+            href={"/"}
+            className="text-main border border-[#1A0F0C] px-6 py-2 text-center uppercase"
+          >
             добраться <br />
             до нас
-          </button>
+          </Link>
         </div>
       </ContentZone>
     </section>
