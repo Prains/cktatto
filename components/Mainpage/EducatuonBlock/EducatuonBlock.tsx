@@ -12,7 +12,7 @@ const EducatuonBlock = () => {
           className="absolute left-0"
         />
         обучение
-      </h3>
+      </h3> 
     </section>
   );
 };
