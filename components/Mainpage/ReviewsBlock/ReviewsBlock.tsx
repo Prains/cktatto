@@ -63,7 +63,7 @@ const ReviewsBlock = () => {
             отзывы клиентов
           </h3> 
           <Swiper
-            className="mb-10 h-[475px]"
+            className="h-[475px]"
             modules={[Pagination]}
             spaceBetween={50}
             slidesPerView={1}
