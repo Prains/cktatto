@@ -36,7 +36,7 @@ const AboutStudioBlock = () => {
           </Link>
           <Link
             href={"/"}
-            className="text-main !leading-normal border border-[#1A0F0C] rounded-[5px] leading-[14px] w-full px-6 py-[4px] text-center uppercase"
+            className="text-main border border-[#1A0F0C] rounded-[5px] !leading-[14px] w-full px-6 py-[4px] text-center uppercase"
           >
             добраться <br />
             до нас
