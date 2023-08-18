@@ -30,13 +30,13 @@ const AboutStudioBlock = () => {
           потрясающем «200 летнем замке», в главном корпусе, на сам ом высоком
           этаже с видом на закат, существует студия “Стальной клык”
         </p>
-        <div className="flex items-center justify-center gap-8">
-          <Link className="button !py-3 px-9 text-center uppercase" href={"/"}>
+        <div className="w-full h-[41px] flex items-center justify-center gap-8">
+          <Link className="button w-full !py-[6px] leading-[14px] px-9 text-center uppercase" href={"/"}>
             больше <br />о студии
           </Link>
           <Link
             href={"/"}
-            className="text-main border border-[#1A0F0C] px-6 py-2 text-center uppercase"
+            className="text-main !leading-normal border border-[#1A0F0C] rounded-[5px] leading-[14px] w-full px-6 py-[4px] text-center uppercase"
           >
             добраться <br />
             до нас

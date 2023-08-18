@@ -33,7 +33,7 @@ const AdvantagesBlock = () => {
           })}
         </ul>
         <article className="flex flex-col gap-4 py-14">
-          <p className="flex flex-col items-start justify-center rounded-bl-[10px] rounded-tr-[10px] border border-[#1A0F0C] px-3 py-2 text-2xl font-bold italic">
+          <p className="flex flex-col items-start justify-center rounded-bl-[10px] rounded-tr-[10px] border-[0.5px] border-[#1A0F0C] px-3 py-2 text-2xl font-bold italic">
             5
             <span className="text-[10px] font-normal">
               профессиональных тату-мастеров
