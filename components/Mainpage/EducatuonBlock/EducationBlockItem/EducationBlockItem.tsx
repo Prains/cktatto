@@ -5,18 +5,16 @@ import Link from "next/link";
 interface EducationBlockItemProps {
   name: string;
   advantages: string[];
-  price: string;
-  subPrice: string;
+  price: number;
 }
 
 const EducationBlockItem = ({
   name,
   advantages,
   price,
-  subPrice
 }: EducationBlockItemProps) => {
   return (
-    <article className="border-[#83746E] rounded-[20px] border-[1px] p-[30px]">
+    <article className="border-[#83746E] rounded-[20px] border-[1px] p-[30px] w-full">
       <p className="text-base font-normal mb-7">Тариф <span className="text-base font-medium">{name}</span></p>
       <ul className={`flex flex-col gap-[10px] ${name !== 'ВИДЕО-КУРС*' ? 'mb-8' : 'mb-3' }`}>
         {advantages.map((advantage, index) => {
@@ -29,8 +27,7 @@ const EducationBlockItem = ({
         })}
       </ul>
       {name === 'ВИДЕО-КУРС*' && <p className="text-[7px] ml-[37px] mb-[34px]">*обратной связи тариф не предусматривает</p>}
-      <p className="text-xl text-[#1e1e1e] mb-[10px]">{price} ₽</p>
-      <p className="text-[10px] text-[#1e1e1e] mb-7">{subPrice} ₽ / мес</p>
+      <p className="text-xl text-[#1e1e1e] mb-[10px]">{price.toString().slice(0, price.toString().length - 3)} {price.toString().slice(price.toString().length - 3, price.toString().length)} ₽</p>
       <div className="flex gap-5 h-10">
         <Link href={"/"} className="flex flex-1 button px-3 justify-center items-center uppercase !rounded-[10px]">
           купить
