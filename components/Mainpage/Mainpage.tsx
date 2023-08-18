@@ -6,6 +6,7 @@ import EducatuonBlock from "./EducatuonBlock/EducatuonBlock";
 import MastersBlock from "./MastersBlock/MastersBlock";
 import MobileMainBlock from "./MobileMainBlock/MobileMainBlock";
 import PortfolioSlider from "./PortfolioSlider/PortfolioSlider";
+import ReviewsBlock from "./ReviewsBlock/ReviewsBlock";
 import portfolioMock from "./uduVlALKtUMXgJOZZy770_hYkxv8joRT4CwMhGiejloKnRemh0qWWhzw7dfKnfWgSaaeQZlFJJxD-WbJx-yPUZZq 1.png";
 
 const Mainpage = () => {
@@ -34,6 +35,7 @@ const Mainpage = () => {
       <AboutStudioBlock />
       <AdvantagesBlock />
       <EducatuonBlock />
+      <ReviewsBlock />
     </main>
   );
 };
