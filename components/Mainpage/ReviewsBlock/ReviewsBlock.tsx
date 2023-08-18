@@ -6,6 +6,34 @@ import { Carousel } from '@mantine/carousel';
 import reviewImage from './77a0228dae80f24cc69f4bf9847be1ac.png'
 
 const ReviewsBlock = () => {
+
+  const reviews = [
+    {
+      id: 1,
+      image: reviewImage.src
+    },
+    {
+      id: 2,
+      image: reviewImage.src
+    },
+    {
+      id: 3,
+      image: reviewImage.src
+    },
+    {
+      id: 4,
+      image: reviewImage.src
+    },
+    {
+      id: 5,
+      image: reviewImage.src
+    },
+    {
+      id: 6,
+      image: reviewImage.src
+    },
+  ]
+
   return ( 
     <section>
       <ContentZone>
@@ -42,24 +70,13 @@ const ReviewsBlock = () => {
               },
             }}
           >
-            <Carousel.Slide>
-              <Image src={reviewImage} width={291} height={451} alt="отзыв" className="object-contain h-[451px] rounded-[10px]" />
-            </Carousel.Slide>
-            <Carousel.Slide>
-              <Image src={reviewImage} width={291} height={451} alt="отзыв" className="object-contain h-[451px] rounded-[10px]" />
-            </Carousel.Slide>
-            <Carousel.Slide>
-              <Image src={reviewImage} width={291} height={451} alt="отзыв" className="object-contain h-[451px] rounded-[10px]" />
-            </Carousel.Slide>
-            <Carousel.Slide>
-              <Image src={reviewImage} width={291} height={451} alt="отзыв" className="object-contain h-[451px] rounded-[10px]" />
-            </Carousel.Slide>
-            <Carousel.Slide>
-              <Image src={reviewImage} width={291} height={451} alt="отзыв" className="object-contain h-[451px] rounded-[10px]" />
-            </Carousel.Slide>
-            <Carousel.Slide>
-              <Image src={reviewImage} width={291} height={451} alt="отзыв" className="object-contain h-[451px] rounded-[10px]" />
-            </Carousel.Slide>
+            {reviews.map(review => {
+              return (
+                <Carousel.Slide key={review.id}>
+                  <Image src={review.image} width={291} height={451} alt="отзыв" className="object-contain h-[451px] rounded-[10px]" />
+                </Carousel.Slide>
+              )
+            })}
           </Carousel>
       </ContentZone>
     </section>
