@@ -1,8 +1,5 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Navigation } from "swiper/modules";
-import "swiper/css/navigation";
+import { Carousel } from "@mantine/carousel";
 import masterImage from "./2023-04-06 2.30 2.png";
 import MasterItem from "./MasterItem/MasterItem";
 import ContentZone from "@/components/ui/ContentZone/ContentZone";
@@ -37,15 +34,38 @@ const MastersBlock = () => {
         <h2 className="text-semibold mb-11 self-center text-center uppercase">
           наши мастера
         </h2>
-        <Swiper modules={[Navigation]} navigation>
-          {masters.map((master, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <MasterItem {...master} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        <Carousel
+            maw={320}
+            mx="auto"
+            slideGap="xl"
+            withControls={false}
+            withIndicators
+            height={350}
+            styles={{
+              indicators: {
+                bottom: '0 !important',
+              },
+              indicator: {
+                width: '5px',
+                height: '5px',
+                border: '1px solid #83746E',
+                borderRadius: 50,
+                transition: 'width 250ms ease',
+
+                '&[data-active]': {
+                  backgroundColor: '#83746E !important',
+                },
+              },
+            }}
+          >
+            {masters.map((master, index) => {
+              return (
+                <Carousel.Slide key={index}>
+                  <MasterItem {...master} />
+                </Carousel.Slide>
+              );
+            })}
+        </Carousel>
       </ContentZone>
     </section>
   );

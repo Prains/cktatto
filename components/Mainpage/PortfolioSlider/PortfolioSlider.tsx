@@ -1,7 +1,4 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import "swiper/css/bundle";
 import Image from "next/image";
 import Link from "next/link";
 import { leftLine } from "@/images/burger";
