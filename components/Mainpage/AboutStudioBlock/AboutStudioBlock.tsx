@@ -24,7 +24,7 @@ const AboutStudioBlock = () => {
           height={182}
           className="mx-auto mt-7 rounded-[10px]"
         />
-        <p className="text-main my-6">
+        <p className="text-main my-6 text-center">
           В центре города, в Балашихинской хлопкопрядильной фабрике 1830 г.,
           которая на сегодняшний день является памятником архитектуры, в нашем
           потрясающем «200 летнем замке», в главном корпусе, на сам ом высоком
