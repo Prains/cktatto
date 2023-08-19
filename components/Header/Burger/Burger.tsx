@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import BurgerLink from "../BurgerLink/BurgerLink";
 import routes from "@/utils/routes";
 import { backgroundLion } from "@/images/burger";
+import Link from "next/link";
 
 interface IBurger {
   setOpen: Function;
@@ -66,10 +67,12 @@ const Burger = ({ setOpen, open }: IBurger) => {
               ))}
             </ul>
           </nav>
-          <p className="flex items-center justify-center flex-col mt-5">
+          <p className="flex items-center justify-center flex-col mt-[35px] text-[10px] leading-[11px] font-normal text-[#83746E]">
             {workingTime}
-            <span>{city}</span>
+            <span className="mt-[11px]">{city}</span>
           </p>
+          {/* BUG Почему-то при нажатии с компа как-будто происходит бесконечное перенаправление, постоянно начинает появляться попап с выбором приложения для звонка */}
+          <Link href={'tel:+79160532323'} className="flex justify-center items-center mt-[34px] w-[135px] h-10 self-center text-[10px] leading-[11px] font-normal text-[#83746E] border-[#83746E] border-[1px] rounded-full">+7 916 053 23 23</Link>
         </ContentZone>
       </motion.div>
     </Overlay>
