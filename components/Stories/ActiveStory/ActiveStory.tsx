@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Carousel } from "@mantine/carousel";
 import Overlay from "@/components/ui/Overlay/Overlay";
 
+// TODO сделать параметр просмотренного сторис
+
 interface ActiveStory {
   setOpen(value: boolean): void;
   stories: {
@@ -44,7 +46,8 @@ const ActiveStory = ({ setOpen, stories, pagination }: ActiveStory) => {
           return (
             <Carousel.Slide key={story.image}>
               <div
-                className="mx-auto bg-neutral-800 w-[205px] h-[385px] rounded-[25px] lg:w-[360px] lg:h-[679px] flex items-center justify-center self-center"
+                // TODO добавлять рамку в зависимости от параметра просмотренного сториса (последние два класса)
+                className="mx-auto bg-neutral-800 w-[205px] h-[385px] rounded-[25px] lg:w-[360px] lg:h-[679px] flex items-center justify-center self-center border-[2px] border-[#FF00C7C4]"
                 onClick={() => setOpen(false)}
               >
                 <Image
