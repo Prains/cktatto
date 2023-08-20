@@ -15,7 +15,7 @@ const MasterItem = ({ id, image, name, experience, role, price }: IMaster) => {
     <article className="flex flex-col items-center justify-center gap-6 lg:flex-row lg:gap-10">
       <div
         className={`flex flex-col ${
-          id % 2 !== 0 ? "order-first" : "order-last"
+          id % 2 !== 0 ? "lg:order-first" : "lg:order-last"
         } items-center justify-center gap-2`}
       >
         <Image
