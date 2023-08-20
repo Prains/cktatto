@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { leftLine } from "@/images/burger";
+import { leftLineDesktop, rightLineDesktop } from "@/images/desktop";
 import { Carousel } from "@mantine/carousel";
 
 interface PSlider {
@@ -15,7 +16,19 @@ const PortfolioSlider = ({ portfolioImages }: PSlider) => {
         <Image
           src={leftLine}
           alt="черная полоска"
-          className="absolute left-0"
+          className="absolute left-0 sm:hidden"
+          priority
+        />
+        <Image
+          src={leftLineDesktop}
+          alt="черная полоска"
+          className="absolute left-[-250px] hidden xl:block lg:left-[-150px] xl:left-0"
+          priority
+        />
+        <Image
+          src={rightLineDesktop}
+          alt="черная полоска"
+          className="absolute right-[-250px] hidden xl:block lg:right-[-150px] xl:right-0"
           priority
         />
         портфолио

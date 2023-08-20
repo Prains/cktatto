@@ -1,5 +1,7 @@
 "use client";
 import { Carousel } from "@mantine/carousel";
+import Image from "next/image";
+import { rightLineDesktop } from "@/images/desktop";
 import masterImage from "./photo.png";
 import masterImage2 from "./photo2.png";
 import masterImage3 from "./photo3.png";
@@ -55,7 +57,13 @@ const MastersBlock = () => {
   return (
     <section>
       <ContentZone>
-        <h2 className="text-semibold mb-11 self-center text-center uppercase lg:mb-24 lg:text-[#83746E]">
+        <h2 className="text-semibold mb-11 self-center text-center uppercase lg:mb-24 lg:text-[#83746E] xl:relative">
+          <Image
+            src={rightLineDesktop}
+            alt="черная полоска"
+            className="absolute right-[-63px] top-[35%] hidden xl:block"
+            priority
+          />
           наши мастера
         </h2>
         <Carousel
