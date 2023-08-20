@@ -10,7 +10,8 @@ import MobileMainBlock from "./MobileMainBlock/MobileMainBlock";
 import PortfolioSlider from "./PortfolioSlider/PortfolioSlider";
 import ReviewsBlock from "./ReviewsBlock/ReviewsBlock";
 import VideosBlock from "./VideosBlock/VideosBlock";
-import portfolioMock from "./uduVlALKtUMXgJOZZy770_hYkxv8joRT4CwMhGiejloKnRemh0qWWhzw7dfKnfWgSaaeQZlFJJxD-WbJx-yPUZZq 1.png";
+import portfolioMock from "./portfSmall.png";
+import portfolioBigMock from './portfBig.png'
 
 const Mainpage = () => {
   const stories = [
@@ -25,7 +26,7 @@ const Mainpage = () => {
     },
   ];
 
-  const portfolioImages = [portfolioMock, portfolioMock, portfolioMock];
+  const portfolioImages = [{img1: portfolioBigMock, img2: portfolioMock, img3: portfolioMock}, {img1: portfolioBigMock, img2: portfolioMock, img3: portfolioMock}, {img1: portfolioBigMock, img2: portfolioMock, img3: portfolioMock}];
 
   return (
     <main className="flex flex-col gap-[55px] lg:gap-[150px]">
