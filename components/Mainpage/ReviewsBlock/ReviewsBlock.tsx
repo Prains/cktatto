@@ -7,6 +7,7 @@ import leftLineReview from './leftLineReview.svg'
 import rightLineReview from './rightLineReview.svg'
 import { Carousel } from '@mantine/carousel';
 import reviewImage from './77a0228dae80f24cc69f4bf9847be1ac.png'
+import lionD from './lion_reviewsD.svg'
 
 const ReviewsBlock = () => {
 
@@ -38,7 +39,8 @@ const ReviewsBlock = () => {
   ]
 
   return ( 
-    <section>
+    <section className="relative">
+      <Image src={lionD} alt="лев" className="hidden xl:block absolute -z-50 top-[120px] left-[125px]"  />
       <ContentZone>
       <h2 className="text-semibold mb-[35px] self-center text-center uppercase lg:mb-24 lg:text-[#83746E] relative">
         <Image

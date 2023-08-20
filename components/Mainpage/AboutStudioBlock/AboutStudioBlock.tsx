@@ -5,11 +5,15 @@ import aboutStudioImage from "./123.png";
 import ContentZone from "@/components/ui/ContentZone/ContentZone";
 import Link from "next/link";
 import machine from './machine_about.svg'
+import machineD from './machine_aboutD.svg'
+import machineD2 from './machine_aboutD2.svg'
 
 const AboutStudioBlock = () => {
   return (
     <section className="relative">
       <Image src={machine} alt="татуировочная машинка" className="lg:hidden absolute -z-50 top-[-123px] right-0" />
+      <Image src={machineD} alt="татуировочная машинка" className="hidden xl:block absolute -z-50 top-[-301px] left-0"  />
+      <Image src={machineD2} alt="татуировочная машинка" className="hidden xl:block absolute -z-50 top-[-311px] left-0"  />
       <ContentZone>
         <h3 className="text-semibold flex items-center justify-center uppercase lg:mb-24 lg:text-[#83746E] xl:relative">
           <Image

@@ -5,6 +5,8 @@ import leftLion from './leftLion.svg'
 import rightLion from './rightLion.svg'
 import lion from './lion.svg'
 import lionBackground from './lion_advantages.svg'
+import machineD from './machine_advantagesD.svg'
+import machineD2 from './machine_advantagesD2.svg'
 
 const AdvantagesBlock = () => {
   const advantages = [
@@ -34,6 +36,8 @@ const AdvantagesBlock = () => {
   return (
     <section className="relative">
       <Image src={lionBackground} alt="лев" className="lg:hidden absolute -z-50 bottom-[-85px] right-0"  />
+      <Image src={machineD} alt="татуировочная машинка" className="hidden xl:block absolute -z-50 top-[-450px] right-0"  />
+      <Image src={machineD2} alt="татуировочная машинка" className="hidden xl:block absolute -z-50 top-[-460px] right-0"  />
       <ContentZone>
         <h3 className="text-semibold text-center uppercase xl:text-[#83746E]">
           наши преимущества

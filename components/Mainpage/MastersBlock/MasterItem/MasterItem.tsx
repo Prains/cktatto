@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import lionDLeft from './lion_masterDLeft.svg'
+import lionDRight from './lion_masterDRight.svg'
 
 interface IMaster {
   id: number;
@@ -16,8 +18,10 @@ const MasterItem = ({ id, image, name, experience, role, price }: IMaster) => {
       <div
         className={`flex flex-col ${
           id % 2 !== 0 ? "lg:order-first" : "lg:order-last"
-        } items-center justify-center gap-2`}
+        } items-center justify-center gap-2 relative`}
       >
+        {id % 2 !== 0 && <Image src={lionDLeft} alt="лев" className="hidden xl:block absolute -z-50 top-[-50px] left-[-60px]"  />}
+        {id % 2 === 0 && <Image src={lionDRight} alt="лев" className="hidden xl:block absolute -z-50 top-[-45px] right-[-60px]"  />}
         <Image
           src={image}
           alt={name}

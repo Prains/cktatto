@@ -1,8 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
+import leftMachine from './machine_mainLeft.svg'
+import rightMachine from './machine_mainRight.svg'
 
 const DesktopMainBlock = () => {
   return ( 
-    <section className="items-center justify-center flex-col hidden lg:flex">
+    <section className="items-center justify-center flex-col hidden lg:flex relative">
+      <Image src={leftMachine} alt="татуировочная машинка" className="hidden xl:block absolute -z-50 top-[-230px] left-0"  />
+      <Image src={rightMachine} alt="татуировочная машинка" className="hidden xl:block absolute -z-50 top-[-240px] right-0"  />
       <h1 className="uppercase flex items-center justify-center flex-col text-neutral-800 text-[22px]">
         тату-студия
         <span className="text-title">«СТАЛЬНОЙ КЛЫК»</span>

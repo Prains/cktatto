@@ -5,11 +5,15 @@ import leftLineInfo from './leftLineInfo.svg'
 import map from './map.png'
 import Link from "next/link";
 import machine from './machine_info.svg'
+import machineD from './machine_infoD.svg'
+import machineD2 from './machine_infoD2.svg'
 
 const InfoBlock = () => {
   return ( 
     <section className="pb-[76px] relative overflow-hidden">
       <Image src={machine} alt="татуировочная машинка" className="lg:hidden absolute -z-50 bottom-[-130px] right-0" />
+      <Image src={machineD} alt="татуировочная машинка" className="hidden xl:block absolute -z-50 bottom-[-351px] right-0"  />
+      <Image src={machineD2} alt="татуировочная машинка" className="hidden xl:block absolute -z-50 bottom-[-341px] right-0"  />
       <ContentZone>
         <h3 className="text-semibold mb-8 flex items-center justify-center uppercase xl:relative xl:text-[#83746E] xl:mb-[96px]">
           <Image
