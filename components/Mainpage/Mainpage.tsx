@@ -11,7 +11,7 @@ import PortfolioSlider from "./PortfolioSlider/PortfolioSlider";
 import ReviewsBlock from "./ReviewsBlock/ReviewsBlock";
 import VideosBlock from "./VideosBlock/VideosBlock";
 import portfolioMock from "./portfSmall.png";
-import portfolioBigMock from './portfBig.png'
+import portfolioBigMock from "./portfBig.png";
 
 const Mainpage = () => {
   const stories = [
@@ -26,7 +26,11 @@ const Mainpage = () => {
     },
   ];
 
-  const portfolioImages = [{img1: portfolioBigMock, img2: portfolioMock, img3: portfolioMock}, {img1: portfolioBigMock, img2: portfolioMock, img3: portfolioMock}, {img1: portfolioBigMock, img2: portfolioMock, img3: portfolioMock}];
+  const portfolioImages = [
+    { img1: portfolioBigMock, img2: portfolioMock, img3: portfolioMock },
+    { img1: portfolioBigMock, img2: portfolioMock, img3: portfolioMock },
+    { img1: portfolioBigMock, img2: portfolioMock, img3: portfolioMock },
+  ];
 
   return (
     <main className="flex flex-col gap-[55px] lg:gap-[150px]">

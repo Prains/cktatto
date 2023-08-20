@@ -6,13 +6,17 @@ import { leftLineDesktop, rightLineDesktop } from "@/images/desktop";
 import { Carousel } from "@mantine/carousel";
 
 interface PSlider {
-  portfolioImages: { src: object }[];
+  portfolioImages: {
+    img1: object;
+    img2: object;
+    img3: object;
+  }[];
 }
 
 const PortfolioSlider = ({ portfolioImages }: PSlider) => {
   return (
     <section className="flex flex-col">
-      <h2 className="flex items-center uppercase text-semibold text-stone-500 self-center mb-9 xl:mb-[96px]">
+      <h2 className="text-semibold mb-9 flex items-center self-center uppercase text-stone-500 xl:mb-[96px]">
         <Image
           src={leftLine}
           alt="черная полоска"
@@ -22,13 +26,13 @@ const PortfolioSlider = ({ portfolioImages }: PSlider) => {
         <Image
           src={leftLineDesktop}
           alt="черная полоска"
-          className="absolute left-[-250px] hidden xl:block lg:left-[-150px] xl:left-0"
+          className="absolute left-[-250px] hidden lg:left-[-150px] xl:left-0 xl:block"
           priority
         />
         <Image
           src={rightLineDesktop}
           alt="черная полоска"
-          className="absolute right-[-250px] hidden xl:block lg:right-[-150px] xl:right-0"
+          className="absolute right-[-250px] hidden lg:right-[-150px] xl:right-0 xl:block"
           priority
         />
         портфолио
@@ -44,17 +48,17 @@ const PortfolioSlider = ({ portfolioImages }: PSlider) => {
           height={253}
           styles={{
             indicators: {
-              bottom: '0 !important',
+              bottom: "0 !important",
             },
             indicator: {
-              width: '5px',
-              height: '5px',
-              border: '1px solid #83746E',
+              width: "5px",
+              height: "5px",
+              border: "1px solid #83746E",
               borderRadius: 50,
-              transition: 'width 250ms ease',
+              transition: "width 250ms ease",
 
-              '&[data-active]': {
-                backgroundColor: '#83746E !important',
+              "&[data-active]": {
+                backgroundColor: "#83746E !important",
               },
             },
           }}
@@ -64,32 +68,32 @@ const PortfolioSlider = ({ portfolioImages }: PSlider) => {
               <>
                 <Carousel.Slide key={index} className="z-0">
                   <Image
-                  // BUG Не понял, как правильно поменять типизацию
+                    // BUG Не понял, как правильно поменять типизацию
                     src={image.img1.src}
                     alt="изображение татуировки на теле человека"
                     width={290}
                     height={232}
-                    className="mx-auto rounded-[10px] h-[232px] z-0 object-cover object-center"
+                    className="z-0 mx-auto h-[232px] rounded-[10px] object-cover object-center"
                   />
                 </Carousel.Slide>
                 <Carousel.Slide key={index} className="z-0">
-                <Image
-                  src={image.img2.src}
-                  alt="изображение татуировки на теле человека"
-                  width={290}
-                  height={387}
-                  className="mx-auto rounded-[10px] h-[232px] z-0 object-cover object-center"
+                  <Image
+                    src={image.img2.src}
+                    alt="изображение татуировки на теле человека"
+                    width={290}
+                    height={387}
+                    className="z-0 mx-auto h-[232px] rounded-[10px] object-cover object-center"
                   />
-                  </Carousel.Slide>
-                  <Carousel.Slide key={index} className="z-0">
+                </Carousel.Slide>
+                <Carousel.Slide key={index} className="z-0">
                   <Image
                     src={image.img3.src}
                     alt="изображение татуировки на теле человека"
                     width={290}
                     height={387}
-                    className="mx-auto rounded-[10px] h-[232px] z-0 object-cover object-center"
+                    className="z-0 mx-auto h-[232px] rounded-[10px] object-cover object-center"
                   />
-                  </Carousel.Slide>
+                </Carousel.Slide>
               </>
             );
           })}
@@ -104,17 +108,17 @@ const PortfolioSlider = ({ portfolioImages }: PSlider) => {
           height={693}
           styles={{
             indicators: {
-              bottom: '0 !important',
+              bottom: "0 !important",
             },
             indicator: {
-              width: '10px',
-              height: '10px',
-              border: '2px solid #83746E',
+              width: "10px",
+              height: "10px",
+              border: "2px solid #83746E",
               borderRadius: 50,
-              transition: 'width 250ms ease',
+              transition: "width 250ms ease",
 
-              '&[data-active]': {
-                backgroundColor: '#83746E !important',
+              "&[data-active]": {
+                backgroundColor: "#83746E !important",
               },
             },
           }}
@@ -123,39 +127,42 @@ const PortfolioSlider = ({ portfolioImages }: PSlider) => {
             return (
               <>
                 <Carousel.Slide key={index} className="z-0">
-                  <div className="flex gap-10 justify-center">
+                  <div className="flex justify-center gap-10">
                     <Image
-                    // BUG Не понял, как правильно поменять типизацию
+                      // BUG Не понял, как правильно поменять типизацию
                       src={image.img1.src}
                       alt="изображение татуировки на теле человека"
                       width={290}
                       height={232}
-                      className="rounded-[10px] z-0 w-[560px] h-[638px] object-contain object-center"
+                      className="z-0 h-[638px] w-[560px] rounded-[10px] object-contain object-center"
                     />
                     <div className="flex flex-col gap-10">
                       <Image
-                      src={image.img2.src}
-                      alt="изображение татуировки на теле человека"
-                      width={290}
-                      height={387}
-                      className="mx-auto rounded-[10px] w-[560px] h-[300px] object-contain object-center z-0"
+                        src={image.img2.src}
+                        alt="изображение татуировки на теле человека"
+                        width={290}
+                        height={387}
+                        className="z-0 mx-auto h-[300px] w-[560px] rounded-[10px] object-contain object-center"
                       />
                       <Image
                         src={image.img3.src}
                         alt="изображение татуировки на теле человека"
                         width={290}
                         height={387}
-                        className="mx-auto rounded-[10px] w-[560px] h-[300px] object-contain object-center z-0"
+                        className="z-0 mx-auto h-[300px] w-[560px] rounded-[10px] object-contain object-center"
                       />
                     </div>
                   </div>
-                  </Carousel.Slide>
+                </Carousel.Slide>
               </>
             );
           })}
         </Carousel>
       </div>
-      <Link href={"/"} className="uppercase button px-10 self-center xl:mt-[32px] xl:w-[400px] xl:h-[80px] xl:text-center">
+      <Link
+        href={"/"}
+        className="button self-center px-10 uppercase xl:mt-[32px] xl:h-[80px] xl:w-[400px] xl:text-center"
+      >
         больше работ
       </Link>
     </section>
