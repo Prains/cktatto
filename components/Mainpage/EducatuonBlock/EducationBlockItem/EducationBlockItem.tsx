@@ -34,7 +34,7 @@ const EducationBlockItem = ({
         </Link>
         <Link
           href={"/"}
-          className="flex flex-1 justify-center items-center px-2 text-center border border-[#1a0f0c] bg-[#e0e0e0] rounded-[10px] text-[10px] uppercase"
+          className="flex flex-1 justify-center items-center px-2 text-center border border-[#1a0f0c] bg-[#e0e0e0] rounded-[10px] text-[10px] uppercase md:h-[60px] md:text-[20px]"
         >
           задать вопрос
         </Link>

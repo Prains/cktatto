@@ -15,7 +15,7 @@ const Stories = ({ stories }: Stories) => {
     setOpen(true);
   };
   return (
-    <section className="flex items-center justify-center gap-6 my-7">
+    <section className="flex items-center justify-center gap-6 my-7 lg:my-[60px]">
       {stories.map((story, index) => (
         <Story
           story={story}

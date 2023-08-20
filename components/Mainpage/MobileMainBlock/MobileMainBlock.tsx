@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const MobileMainBlock = () => {
   return (
-    <section className="flex items-center justify-center flex-col">
+    <section className="flex items-center justify-center flex-col lg:hidden">
       <h1 className="uppercase flex items-center justify-center flex-col text-neutral-800">
         тату-студия
         <span className="text-title">«СТАЛЬНОЙ КЛЫК»</span>

@@ -17,9 +17,9 @@ const InfoBlock = () => {
           />
           добраться до нас
         </h3>
-        <div className="flex gap-3">
+        <div className="flex gap-3 justify-center">
           <Link target="_blank" href={'https://yandex.ru/maps/-/CDQQRWnB'}>
-            <Image src={map} alt="карта" className="object-cover rounded-[10px] w-[143px] h-[126px]"/>
+            <Image src={map} alt="карта" className="object-cover rounded-[10px] w-[143px] h-[126px] md:w-[168px] md:h-[151px]"/>
           </Link>
           <div className="flex flex-col">
             <p className="text-[10px] font-normal leading-[11px] text-[#202020] mb-[26px]">Работаем с 10:00 до 22:00</p>

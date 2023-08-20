@@ -22,7 +22,7 @@ const VideosBlock = () => {
   ]
 
   return ( 
-    <section>
+    <section className="lg:hidden">
       <ContentZone>
         <h3 className="text-semibold mb-8 flex items-center justify-center uppercase">
           <Image

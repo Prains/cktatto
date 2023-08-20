@@ -1,3 +1,4 @@
+import DesktopMainBlock from "./DesktopMainBlock/DesktopMainBlock";
 import Stories from "../Stories/Stories";
 import mock from "./8Z_Xg94fa-OZfQcEwYASHPNqy7EiVV5ewviDYdyO1hIXazkzvcQvjGSkE9eYVW5hJV9xFo3EoIjE-qwiPikpBX5I 1.png";
 import AboutStudioBlock from "./AboutStudioBlock/AboutStudioBlock";
@@ -31,6 +32,7 @@ const Mainpage = () => {
       <div>
         <Stories stories={stories} />
         <MobileMainBlock />
+        <DesktopMainBlock />
       </div>
       <PortfolioSlider portfolioImages={portfolioImages} />
       <MastersBlock />
