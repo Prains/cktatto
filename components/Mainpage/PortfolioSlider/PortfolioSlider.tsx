@@ -7,9 +7,9 @@ import { Carousel } from "@mantine/carousel";
 
 interface PSlider {
   portfolioImages: {
-    img1: object;
-    img2: object;
-    img3: object;
+    img1: { src: string };
+    img2: { src: string };
+    img3: { src: string };
   }[];
 }
 
