@@ -34,7 +34,7 @@ const EducatuonBlock = () => {
   ]
 
   return (
-    <section>
+    <section className="lg:hidden">
       <ContentZone>
         <h3 className="text-semibold mb-8 flex items-center justify-center uppercase">
           <Image
@@ -51,7 +51,7 @@ const EducatuonBlock = () => {
               <EducationBlockItem key={item.id} name={item.name} advantages={item.advantages} price={item.price} />
             )
           })}
-          <Link href={'/'} className="flex items-center justify-center button w-[180px] h-10 uppercase">узнать больше</Link>
+          <Link href={'/'} className="flex items-center justify-center button w-[180px] h-10 uppercase text-center">узнать больше</Link>
         </div>
       </ContentZone>
     </section>

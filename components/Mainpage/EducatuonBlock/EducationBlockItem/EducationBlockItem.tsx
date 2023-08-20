@@ -27,14 +27,14 @@ const EducationBlockItem = ({
         })}
       </ul>
       {name === 'ВИДЕО-КУРС*' && <p className="text-[7px] ml-[37px] mb-[34px]">*обратной связи тариф не предусматривает</p>}
-      <p className="text-xl text-[#1e1e1e] mb-[10px]">{price.toString().slice(0, price.toString().length - 3)} {price.toString().slice(price.toString().length - 3, price.toString().length)} ₽</p>
+      <p className="text-xl text-[#1e1e1e] mb-[26px]">{price.toString().slice(0, price.toString().length - 3)} {price.toString().slice(price.toString().length - 3, price.toString().length)} ₽</p>
       <div className="flex gap-5 h-10">
         <Link href={"/"} className="flex flex-1 button px-3 justify-center items-center uppercase !rounded-[10px]">
           купить
         </Link>
         <Link
           href={"/"}
-          className="flex flex-1 justify-center items-center px-2 text-center border border-[#1a0f0c] bg-[#e0e0e0] rounded-[10px] text-[10px] uppercase"
+          className="flex flex-1 justify-center items-center px-2 text-center border border-[#1a0f0c] bg-[#e0e0e0] rounded-[10px] text-[10px] uppercase md:h-[60px] md:text-[20px]"
         >
           задать вопрос
         </Link>

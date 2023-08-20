@@ -25,7 +25,7 @@ const DesktopHeader = () => {
   const secondHalfList = navList.slice(4);
 
   return (
-    <header className="hidden lg:block mt-24">
+    <header className="hidden lg:block mt-[50px]">
       <ContentZone>
         <nav className="flex items-center justify-center gap-20">
           <ul className="flex items-center justify-center gap-12">

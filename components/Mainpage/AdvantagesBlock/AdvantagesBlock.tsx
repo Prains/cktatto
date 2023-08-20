@@ -32,7 +32,7 @@ const AdvantagesBlock = () => {
             );
           })}
         </ul>
-        <article className="flex flex-col gap-4 py-14">
+        <article className="flex flex-col gap-4 pt-[60px]">
           <p className="flex flex-col items-start justify-center rounded-bl-[10px] rounded-tr-[10px] border-[0.5px] border-[#1A0F0C] px-3 py-2 text-2xl font-bold italic">
             5
             <span className="text-[10px] font-normal">
