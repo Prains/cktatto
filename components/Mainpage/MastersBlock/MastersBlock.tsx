@@ -61,7 +61,7 @@ const MastersBlock = () => {
           <Image
             src={rightLineDesktop}
             alt="черная полоска"
-            className="absolute right-[-63px] top-[35%] hidden xl:block"
+            className="absolute right-[-57px] top-[35%] hidden xl:block"
             priority
           />
           наши мастера
