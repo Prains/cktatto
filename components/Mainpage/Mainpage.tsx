@@ -12,7 +12,7 @@ import ReviewsBlock from "./ReviewsBlock/ReviewsBlock";
 import VideosBlock from "./VideosBlock/VideosBlock";
 import portfolioMock from "./portfSmall.png";
 import portfolioBigMock from "./portfBig.png";
-
+ 
 const Mainpage = () => {
   const stories = [
     {
