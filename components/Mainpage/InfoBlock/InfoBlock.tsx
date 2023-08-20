@@ -4,10 +4,12 @@ import { leftLine } from "@/images/burger";
 import leftLineInfo from './leftLineInfo.svg'
 import map from './map.png'
 import Link from "next/link";
+import machine from './machine_info.svg'
 
 const InfoBlock = () => {
   return ( 
-    <section className="mb-[76px]">
+    <section className="pb-[76px] relative overflow-hidden">
+      <Image src={machine} alt="татуировочная машинка" className="lg:hidden absolute -z-50 bottom-[-130px] right-0" />
       <ContentZone>
         <h3 className="text-semibold mb-8 flex items-center justify-center uppercase xl:relative xl:text-[#83746E] xl:mb-[96px]">
           <Image

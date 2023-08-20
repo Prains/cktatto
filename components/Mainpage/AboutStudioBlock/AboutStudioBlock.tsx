@@ -4,10 +4,12 @@ import Image from "next/image";
 import aboutStudioImage from "./123.png";
 import ContentZone from "@/components/ui/ContentZone/ContentZone";
 import Link from "next/link";
+import machine from './machine_about.svg'
 
 const AboutStudioBlock = () => {
   return (
-    <section>
+    <section className="relative">
+      <Image src={machine} alt="татуировочная машинка" className="lg:hidden absolute -z-50 top-[-123px] right-0" />
       <ContentZone>
         <h3 className="text-semibold flex items-center justify-center uppercase lg:mb-24 lg:text-[#83746E] xl:relative">
           <Image

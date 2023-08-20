@@ -40,7 +40,7 @@ const ReviewsBlock = () => {
   return ( 
     <section>
       <ContentZone>
-      <h2 className="text-semibold mb-11 self-center text-center uppercase lg:mb-24 lg:text-[#83746E] relative">
+      <h2 className="text-semibold mb-[35px] self-center text-center uppercase lg:mb-24 lg:text-[#83746E] relative">
         <Image
             src={leftLine}
             alt="черная линия"

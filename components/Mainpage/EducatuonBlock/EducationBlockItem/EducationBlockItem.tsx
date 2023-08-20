@@ -1,6 +1,8 @@
 import { mobileLogo } from "@/images/icons";
 import Image from "next/image";
 import Link from "next/link";
+import lion from './lion_education.svg'
+import machine from './machine_education.svg'
 
 interface EducationBlockItemProps {
   name: string;
@@ -14,7 +16,9 @@ const EducationBlockItem = ({
   price,
 }: EducationBlockItemProps) => {
   return (
-    <article className="border-[#83746E] rounded-[20px] border-[1px] p-[30px] w-full">
+    <article className="border-[#83746E] rounded-[20px] border-[1px] p-[30px] w-full relative overflow-hidden">
+      <Image src={lion} alt="лев" className="lg:hidden absolute -z-50 top-0 left-[-15px]" />
+      <Image src={machine} alt="татуировочная машинка" className="lg:hidden absolute -z-50 bottom-[40px] right-[-25px]" />
       <p className="text-base font-normal mb-7">Тариф <span className="text-base font-medium">{name}</span></p>
       <ul className={`flex flex-col gap-[10px] ${name !== 'ВИДЕО-КУРС*' ? 'mb-8' : 'mb-3' }`}>
         {advantages.map((advantage, index) => {

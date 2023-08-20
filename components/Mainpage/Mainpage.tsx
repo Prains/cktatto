@@ -12,6 +12,8 @@ import ReviewsBlock from "./ReviewsBlock/ReviewsBlock";
 import VideosBlock from "./VideosBlock/VideosBlock";
 import portfolioMock from "./portfSmall.png";
 import portfolioBigMock from "./portfBig.png";
+import Image from "next/image";
+import machine from './logo_machine.svg'
  
 const Mainpage = () => {
   const stories = [
@@ -34,7 +36,8 @@ const Mainpage = () => {
 
   return (
     <main className="flex flex-col gap-[55px] lg:gap-[150px]">
-      <div>
+      <div className="relative overflow-hidden">
+        <Image src={machine} alt="татуировочная машинка" className="absolute right-0 -z-50 lg:hidden" />
         <Stories stories={stories} />
         <MobileMainBlock />
         <DesktopMainBlock />

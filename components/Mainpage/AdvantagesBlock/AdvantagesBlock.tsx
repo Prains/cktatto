@@ -4,6 +4,7 @@ import Image from "next/image";
 import leftLion from './leftLion.svg'
 import rightLion from './rightLion.svg'
 import lion from './lion.svg'
+import lionBackground from './lion_advantages.svg'
 
 const AdvantagesBlock = () => {
   const advantages = [
@@ -31,7 +32,8 @@ const AdvantagesBlock = () => {
   ];
 
   return (
-    <section>
+    <section className="relative">
+      <Image src={lionBackground} alt="лев" className="lg:hidden absolute -z-50 bottom-[-85px] right-0"  />
       <ContentZone>
         <h3 className="text-semibold text-center uppercase xl:text-[#83746E]">
           наши преимущества
@@ -46,18 +48,18 @@ const AdvantagesBlock = () => {
           })}
         </ul>
         <article className="flex flex-col gap-4 pt-[60px] xl:hidden">
-          <p className="flex flex-col items-start justify-center rounded-bl-[10px] rounded-tr-[10px] border-[0.5px] border-[#1A0F0C] px-3 py-2 text-2xl font-bold italic">
+          <p className="flex flex-col items-start justify-center rounded-bl-[10px] rounded-tr-[10px] border-[0.5px] border-[#1A0F0C] bg-[#E0E0E0] px-3 py-2 text-2xl font-bold italic">
             5
             <span className="text-[10px] font-normal">
               профессиональных тату-мастеров
             </span>
           </p>
           <div className="flex items-center justify-between gap-4">
-            <p className="flex flex-col items-start justify-center rounded-bl-[10px] rounded-tr-[10px] border border-[#1A0F0C] px-3 py-2 text-2xl font-bold italic">
+            <p className="flex flex-col items-start justify-center rounded-bl-[10px] rounded-tr-[10px] border border-[#1A0F0C] bg-[#E0E0E0] px-3 py-2 text-2xl font-bold italic">
               2014
               <span className="text-[10px] font-normal">год основания</span>
             </p>
-            <p className="flex flex-col items-start justify-center rounded-bl-[10px] rounded-tr-[10px] border border-[#1A0F0C] px-3 py-2 text-2xl font-bold italic">
+            <p className="flex flex-col items-start justify-center rounded-bl-[10px] rounded-tr-[10px] border border-[#1A0F0C] bg-[#E0E0E0] px-3 py-2 text-2xl font-bold italic">
               3000+
               <span className="text-[10px] font-normal">
                 довольных клиентов
