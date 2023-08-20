@@ -24,7 +24,7 @@ const AboutStudioBlock = () => {
           />
           О студии
         </h3>
-        <div className="flex flex-col gap-6 mb-6 lg:flex-row lg:gap-[65px] lg:mb-14">
+        <div className="flex flex-col gap-6 mb-6 lg:flex-row lg:gap-[65px] lg:mb-14 lg:justify-center">
           <Image
             src={aboutStudioImage.src}
             alt="фото студии"
