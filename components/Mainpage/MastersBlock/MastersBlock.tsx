@@ -10,6 +10,7 @@ import masterImage5 from "./photo5.png";
 import MasterItem from "./MasterItem/MasterItem";
 import ContentZone from "@/components/ui/ContentZone/ContentZone";
 import Link from "next/link";
+import lion from './lion_master.svg'
 
 const MastersBlock = () => {
   const masters = [
@@ -55,13 +56,14 @@ const MastersBlock = () => {
     },
   ];
   return (
-    <section>
+    <section className="relative">
+      <Image src={lion} alt="лев" className="lg:hidden absolute -z-50 top-[-170px] left-0" />
       <ContentZone>
         <h2 className="text-semibold mb-11 self-center text-center uppercase lg:mb-24 lg:text-[#83746E] xl:relative">
           <Image
             src={rightLineDesktop}
             alt="черная полоска"
-            className="absolute right-[-63px] top-[35%] hidden xl:block"
+            className="absolute right-[-57px] top-[35%] hidden xl:block"
             priority
           />
           наши мастера

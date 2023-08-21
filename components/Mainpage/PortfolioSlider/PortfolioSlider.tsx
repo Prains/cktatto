@@ -4,6 +4,10 @@ import Link from "next/link";
 import { leftLine } from "@/images/burger";
 import { leftLineDesktop, rightLineDesktop } from "@/images/desktop";
 import { Carousel } from "@mantine/carousel";
+import lion from './lion_logo.svg'
+import lionD from './lion_portfolioD.svg'
+import machineD from './machine_portfolioD.svg'
+import machineD2 from './machine_portfolioD2.svg'
 
 interface PSlider {
   portfolioImages: {
@@ -15,7 +19,11 @@ interface PSlider {
 
 const PortfolioSlider = ({ portfolioImages }: PSlider) => {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col relative">
+      <Image src={lion} alt="лев" className="lg:hidden absolute -z-50 top-[-115px] left-0" />
+      <Image src={lionD} alt="лев" className="hidden xl:block absolute -z-50 top-[-230px] left-[125px]"  />
+      <Image src={machineD} alt="татуировочная машинка" className="hidden xl:block absolute -z-50 bottom-[-281px] right-0"  />
+      <Image src={machineD2} alt="татуировочная машинка" className="hidden xl:block absolute -z-50 bottom-[-271px] right-0"  />
       <h2 className="text-semibold mb-9 flex items-center self-center uppercase text-stone-500 xl:mb-[96px]">
         <Image
           src={leftLine}
@@ -68,7 +76,6 @@ const PortfolioSlider = ({ portfolioImages }: PSlider) => {
               <>
                 <Carousel.Slide key={index} className="z-0">
                   <Image
-                    // BUG Не понял, как правильно поменять типизацию
                     src={image.img1.src}
                     alt="изображение татуировки на теле человека"
                     width={290}

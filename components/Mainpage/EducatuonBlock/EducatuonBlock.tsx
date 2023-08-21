@@ -3,6 +3,7 @@ import { leftLine } from "@/images/burger";
 import Image from "next/image";
 import Link from "next/link";
 import EducationBlockItem from "./EducationBlockItem/EducationBlockItem";
+import lion from './lion_education.svg'
 
 const EducatuonBlock = () => {
 
@@ -34,7 +35,8 @@ const EducatuonBlock = () => {
   ]
 
   return (
-    <section className="lg:hidden">
+    <section className="lg:hidden relative">
+      <Image src={lion} alt="лев" className="lg:hidden absolute -z-50 bottom-[-245px] right-0"  />
       <ContentZone>
         <h3 className="text-semibold mb-8 flex items-center justify-center uppercase">
           <Image
