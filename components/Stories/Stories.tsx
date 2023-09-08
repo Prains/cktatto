@@ -2,6 +2,9 @@
 import ActiveStory from "./ActiveStory/ActiveStory";
 import Story from "./Story/Story";
 import { useState } from "react";
+import leftMachine from './machine_mainLeft.svg'
+import rightMachine from './machine_mainRight.svg'
+import Image from "next/image";
 
 interface Stories {
   stories: { image: string }[];
@@ -15,7 +18,17 @@ const Stories = ({ stories }: Stories) => {
     setOpen(true);
   };
   return (
-    <section className="flex items-center justify-center gap-6 my-7 lg:my-[60px]">
+    <section className="my-7 flex items-center justify-center gap-6 lg:my-[60px]">
+      <Image
+        src={leftMachine}
+        alt="татуировочная машинка"
+        className="absolute left-0 top-[130px] -z-50 hidden xl:block"
+      />
+      <Image
+        src={rightMachine}
+        alt="татуировочная машинка"
+        className="absolute right-0 top-[140px] -z-50 hidden xl:block"
+      />
       {stories.map((story, index) => (
         <Story
           story={story}

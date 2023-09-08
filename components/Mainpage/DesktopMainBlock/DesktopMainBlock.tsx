@@ -1,23 +1,19 @@
 import Link from "next/link";
-import Image from "next/image";
-import leftMachine from './machine_mainLeft.svg'
-import rightMachine from './machine_mainRight.svg'
-
 const DesktopMainBlock = () => {
-  return ( 
-    <section className="items-center justify-center flex-col hidden lg:flex relative">
-      <Image src={leftMachine} alt="татуировочная машинка" className="hidden xl:block absolute -z-50 top-[-230px] left-0"  />
-      <Image src={rightMachine} alt="татуировочная машинка" className="hidden xl:block absolute -z-50 top-[-240px] right-0"  />
-      <h1 className="uppercase flex items-center justify-center flex-col text-neutral-800 text-[22px]">
+  return (
+    <section className="relative hidden flex-col items-center justify-center lg:flex">
+      <h1 className="flex flex-col items-center justify-center text-[22px] uppercase text-neutral-800">
         тату-студия
         <span className="text-title">«СТАЛЬНОЙ КЛЫК»</span>
       </h1>
-      <p className="text-xl mt-[47px]">Место внешней и внутренней трансформации</p>
-      <Link className="uppercase button px-[60px] mt-[62px]" href={"/"}>
+      <p className="mt-[47px] text-xl">
+        Место внешней и внутренней трансформации
+      </p>
+      <Link className="button mt-[62px] px-[60px] uppercase" href={"/"}>
         консультация бесплатно
       </Link>
     </section>
-   );
-}
- 
+  );
+};
+
 export default DesktopMainBlock;
