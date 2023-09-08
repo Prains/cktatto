@@ -14,7 +14,6 @@ class Api {
     const res = await fetch(url, {
       method: "GET",
       headers: this.headers,
-      next: { revalidate: 60 },
     });
     return res.json();
   }
@@ -24,7 +23,6 @@ class Api {
       method: "POST",
       headers: this.headers,
       body: JSON.stringify(body),
-      next: { revalidate: 60 },
     });
     return res.json();
   }
@@ -34,7 +32,6 @@ class Api {
       method: "PUT",
       headers: this.headers,
       body: JSON.stringify(body),
-      next: { revalidate: 60 },
     });
     return res.json();
   }
@@ -54,7 +51,6 @@ class Api {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      next: { revalidate: 60 },
     });
     return res.json();
   }
