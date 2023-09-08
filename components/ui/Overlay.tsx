@@ -4,10 +4,9 @@ import { useEffect } from "react";
 interface OverlayProps {
   children: React.ReactNode;
   className?: string;
-  overlayColor: string;
 }
 
-const Overlay = ({ children, className, overlayColor }: OverlayProps) => {
+const Overlay = ({ children, className }: OverlayProps) => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -18,7 +17,7 @@ const Overlay = ({ children, className, overlayColor }: OverlayProps) => {
   return (
     <div
       className={
-        `${overlayColor} absolute z-50  top-0 left-0 w-full h-full flex items-center justify-center` +
+        `absolute left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-neutral-900/70` +
         ` ${className}`
       }
     >

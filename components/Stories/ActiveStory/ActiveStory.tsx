@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Carousel } from "@mantine/carousel";
-import Overlay from "@/components/ui/Overlay/Overlay";
+import Overlay from "@/components/ui/Overlay";
 
 // TODO сделать параметр просмотренного сторис
 

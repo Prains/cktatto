@@ -1,6 +1,6 @@
 "use client";
 import ContentZone from "@/components/ui/ContentZone/ContentZone";
-import Overlay from "@/components/ui/Overlay/Overlay";
+import Overlay from "@/components/ui/Overlay";
 import NavigationIcons from "../NavigationIcons/NavigationIcons";
 import Logo from "@/components/ui/Logo";
 import { motion } from "framer-motion";

@@ -14,7 +14,7 @@ const Story = ({ story, setOpen, index }: Story) => {
       <Image
         src={story.image}
         alt="История сktatto"
-        className="w-10 h-10 lg:w-[54px] lg:h-[54px] object-cover object-center rounded-full border-[2px] border-[#FF00C7C4]"
+        className="h-10 w-10 cursor-pointer rounded-full border-[2px] border-[#FF00C7C4] object-cover object-center lg:h-[54px] lg:w-[54px]"
         width={36}
         height={36}
         onClick={() => setOpen(index)}
