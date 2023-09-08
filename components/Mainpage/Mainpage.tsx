@@ -22,7 +22,7 @@ const Mainpage = () => {
 
   return (
     <main className="flex flex-col gap-[55px] lg:gap-[150px]">
-      <div className="relative overflow-hidden">
+      <div className="relative">
         <Image
           src={machine}
           alt="татуировочная машинка"
