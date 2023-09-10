@@ -1,6 +1,16 @@
+"use client";
 import Image from "next/image";
-import { Carousel } from "@mantine/carousel";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+  Dot,
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 import Overlay from "@/components/ui/Overlay";
+import { useState } from "react";
 
 // TODO сделать параметр просмотренного сторис
 
@@ -13,55 +23,56 @@ interface ActiveStory {
 }
 
 const ActiveStory = ({ setOpen, stories, pagination }: ActiveStory) => {
+  const [activeSlide, setActiveSlide] = useState(0);
   return (
     <Overlay>
-      <Carousel
-        initialSlide={pagination}
-        maw={320}
-        mx="auto"
-        withControls={false}
-        withIndicators
-        height={422}
-        styles={{
-          indicators: {
-            bottom: '0 !important',
-          },
-          indicator: {
-            width: '20px',
-            height: '4px',
-            border: 'none',
-            backgroundColor: '#E0E0E0 !important',
-            borderRadius: 50,
-            opacity: '1 !important',
-            transition: 'width 250ms ease',
-
-            '&[data-active]': {
-              backgroundColor: '#FF00C7C4 !important',
-              opacity: '1 !important',
-            },
-          },
-        }}
+      <CarouselProvider
+        naturalSlideHeight={385}
+        naturalSlideWidth={205}
+        totalSlides={stories.length}
+        className="h-[385px] w-[205px] lg:h-[679px] lg:w-[360px]"
       >
-        {stories.map(story => {
-          return (
-            <Carousel.Slide key={story.image}>
-              <div
-                // TODO добавлять рамку в зависимости от параметра просмотренного сториса (последние два класса)
-                className="mx-auto bg-neutral-800 w-[205px] h-[385px] rounded-[25px] lg:w-[360px] lg:h-[679px] flex items-center justify-center self-center border-[2px] border-[#FF00C7C4]"
-                onClick={() => setOpen(false)}
+        <Slider>
+          {stories.map((story, index) => {
+            return (
+              <Slide
+                key={index}
+                index={index}
+                className="rounded-3xl border-2 border-pink-600 bg-[#202020] py-6"
               >
                 <Image
                   src={story.image}
-                  alt="story"
-                  width={180}
-                  height={358}
-                  className="object-cover object-center rounded-[20px] lg:w-[315px] lg:h-[631px]"
+                  alt="история cktattoo"
+                  width={315}
+                  height={631}
+                  className="mx-auto mt-3 h-[385px] w-[180px] lg:mt-9 lg:h-[631px] lg:w-[315px]"
+                  priority
+                  onClick={() => {
+                    setOpen(false);
+                  }}
                 />
-              </div>
-            </Carousel.Slide>
-          )
-        })}
-      </Carousel>
+              </Slide>
+            );
+          })}
+        </Slider>
+        <div className="mt-5 flex items-center justify-center gap-3">
+          {stories.map((_, index) => {
+            const isActive =
+              index === activeSlide ? "bg-[#FF00C7]" : "bg-[#e0e0e0]";
+
+            return (
+              <Dot
+                slide={index}
+                key={index}
+                className={`h-1 w-6 rounded-full ${isActive}`}
+                onClick={() => {
+                  setActiveSlide(index);
+                }}
+              />
+            );
+          })}
+        </div>
+      </CarouselProvider>
     </Overlay>
   );
 };
