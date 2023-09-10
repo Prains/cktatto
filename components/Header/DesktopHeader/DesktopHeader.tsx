@@ -67,13 +67,13 @@ const DesktopHeader = () => {
               >
                 {phone}
               </Link>
-              <Link href={routes.profile}>
+{/*               <Link href={routes.profile}>
                 <Image
                   src={profileIcon}
                   alt="торс человека в кружке"
                   priority
                 />
-              </Link>
+              </Link> */}
             </div>
           </ul>
         </nav>
