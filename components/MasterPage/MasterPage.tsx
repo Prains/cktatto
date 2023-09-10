@@ -28,7 +28,7 @@ const Master = () => {
                   width={560}
                   height={300}
                 />
-              </li>
+              </li> 
             );
           })}
         </ul>
