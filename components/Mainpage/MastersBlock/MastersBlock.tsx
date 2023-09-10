@@ -10,7 +10,7 @@ import masterImage5 from "./photo5.png";
 import MasterItem from "./MasterItem/MasterItem";
 import ContentZone from "@/components/ui/ContentZone/ContentZone";
 import Link from "next/link";
-import lion from './lion_master.svg'
+import lion from "./lion_master.svg";
 
 const MastersBlock = () => {
   const masters = [
@@ -56,8 +56,12 @@ const MastersBlock = () => {
     },
   ];
   return (
-    <section className="relative">
-      <Image src={lion} alt="лев" className="lg:hidden absolute -z-50 top-[-170px] left-0" />
+    <section className="relative" id="masters">
+      <Image
+        src={lion}
+        alt="лев"
+        className="absolute left-0 top-[-170px] -z-50 lg:hidden"
+      />
       <ContentZone>
         <h2 className="text-semibold mb-11 self-center text-center uppercase lg:mb-24 lg:text-[#83746E] xl:relative">
           <Image
@@ -69,39 +73,39 @@ const MastersBlock = () => {
           наши мастера
         </h2>
         <Carousel
-            className="lg:hidden"
-            maw={420}
-            mx="auto"
-            slideGap="xl"
-            withControls={false}
-            withIndicators
-            height={'calc((100vw - 320px) / (768 - 320) * (400 - 350) + 350px)'}
-            mah={400}
-            styles={{
-              indicators: {
-                bottom: '0 !important',
+          className="lg:hidden"
+          maw={420}
+          mx="auto"
+          slideGap="xl"
+          withControls={false}
+          withIndicators
+          height={"calc((100vw - 320px) / (768 - 320) * (400 - 350) + 350px)"}
+          mah={400}
+          styles={{
+            indicators: {
+              bottom: "0 !important",
+            },
+            indicator: {
+              width: "5px",
+              height: "5px",
+              border: "1px solid #83746E",
+              borderRadius: 50,
+              transition: "width 250ms ease",
+              "&[data-active]": {
+                backgroundColor: "#83746E !important",
               },
-              indicator: {
-                width: '5px',
-                height: '5px',
-                border: '1px solid #83746E',
-                borderRadius: 50,
-                transition: 'width 250ms ease',
-                '&[data-active]': {
-                  backgroundColor: '#83746E !important',
-                },
-              },
-            }}
-          >
-            {masters.map((master, index) => {
-              return (
-                <Carousel.Slide key={index}>
-                  <MasterItem {...master} />
-                </Carousel.Slide>
-              );
-            })}
+            },
+          }}
+        >
+          {masters.map((master, index) => {
+            return (
+              <Carousel.Slide key={index}>
+                <MasterItem {...master} />
+              </Carousel.Slide>
+            );
+          })}
         </Carousel>
-        <div className="flex-col gap-10 hidden lg:flex lg:mb-24">
+        <div className="hidden flex-col gap-10 lg:mb-24 lg:flex">
           {masters.map((master, index) => {
             return (
               <div key={index}>
@@ -110,7 +114,12 @@ const MastersBlock = () => {
             );
           })}
         </div>
-        <Link href={'/'} className="hidden lg:flex justify-center items-center w-[440px] h-[80px] mx-auto button uppercase">работы мастеров</Link>
+        <Link
+          href={"/"}
+          className="button mx-auto hidden h-[80px] w-[440px] items-center justify-center uppercase lg:flex"
+        >
+          работы мастеров
+        </Link>
       </ContentZone>
     </section>
   );

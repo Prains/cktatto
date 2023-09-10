@@ -20,7 +20,7 @@ const Burger = ({ setOpen, open }: IBurger) => {
     { text: "Главная", href: routes.mainpage },
     { text: "Портфолио", href: routes.portfolio },
     { text: "О студии", href: routes.about },
-    { text: "Мастера", href: routes.masters },
+    { text: "Мастера", href: "#masters" },
     { text: "Отзывы", href: routes.reviews },
     { text: "Обучение", href: routes.education },
     { text: "Контакты", href: routes.contacts },
@@ -35,7 +35,7 @@ const Burger = ({ setOpen, open }: IBurger) => {
   return (
     <Overlay>
       <motion.div
-        className="self-start py-5 bg-neutral-200 rounded-b-lg w-full"
+        className="w-full self-start rounded-b-lg bg-neutral-200 py-5"
         initial={{ y: -2000 }}
         animate={{ y: 0 }}
         exit={{ y: -2000 }}
@@ -54,7 +54,7 @@ const Burger = ({ setOpen, open }: IBurger) => {
             <NavigationIcons setOpen={setOpen} open={open} />
           </div>
           <nav className="mt-8">
-            <ul className="flex items-center justify-center flex-col gap-6">
+            <ul className="flex flex-col items-center justify-center gap-6">
               {navList.map((item) => (
                 <li key={item.text}>
                   <BurgerLink
@@ -67,12 +67,17 @@ const Burger = ({ setOpen, open }: IBurger) => {
               ))}
             </ul>
           </nav>
-          <p className="flex items-center justify-center flex-col mt-[35px] text-[10px] leading-[11px] font-normal text-[#83746E]">
+          <p className="mt-[35px] flex flex-col items-center justify-center text-[10px] font-normal leading-[11px] text-[#83746E]">
             {workingTime}
             <span className="mt-[11px]">{city}</span>
           </p>
           {/* BUG Почему-то при нажатии с компа как-будто происходит бесконечное перенаправление, постоянно начинает появляться попап с выбором приложения для звонка */}
-          <Link href={'tel:+79160532323'} className="flex justify-center items-center mt-[34px] w-[135px] h-10 self-center text-[10px] leading-[11px] font-normal text-[#83746E] border-[#83746E] border-[1px] rounded-full">+7 916 053 23 23</Link>
+          <Link
+            href={"tel:+79160532323"}
+            className="mt-[34px] flex h-10 w-[135px] items-center justify-center self-center rounded-full border-[1px] border-[#83746E] text-[10px] font-normal leading-[11px] text-[#83746E]"
+          >
+            +7 916 053 23 23
+          </Link>
         </ContentZone>
       </motion.div>
     </Overlay>
